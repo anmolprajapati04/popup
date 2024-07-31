@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clickhere{
+            background-color: #4CAF50;
+            border-radius: 10px;
+        }
+        .heading{
+            font-size: 35px;
+            color: darkcyan;
+            border: #4CAF50 solid 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color: #f0f0f0;
+        }
+    </style>
+    <script type="text/javascript" href></script>
+</head>
+<body>
+    <h2 class="heading">Click on the button below.</h2>
+    <button id="clickhere">Click Here</button>
+
+<script>
+  const clickhere = document.getElementById('clickhere');
+
+  clickhere.addEventListener('click', () => {
+    const Address = prompt("Enter your address:");
+    const states = ["Haryana", "Punjab", "Chandigarh"];
+
+    if (states.includes(Address)) {
+      window.location.href = "popup.html";
+    } else {
+      alert("Access Denied!");
+    }
+  });
+</script>
+    
+</body>

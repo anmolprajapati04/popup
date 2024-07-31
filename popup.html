@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        h1{
+            font-size: 60px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: forestgreen;
+        }
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: rgb(127, 180, 255);
+        }
+        form {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 3px solid #00000000;
+            border-radius: 20px;
+            
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 3px solid #cccccc;
+            border-radius: 10px;
+        }
+        input[type="submit"] {
+            background-color: #075500;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Log In</h1>
+    <form onsubmit="checkpass()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter Username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password"><br><br>
+        <input type="submit" value="Log In">
+
+        <script>
+            function checkpass() {
+
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const correctPassword = 'Anmol'; 
+
+            if (password === correctPassword) {
+                alert('Welcome!');
+                return false;
+            } else {
+                alert('Wrong password');
+                return false;
+            }
+            
+        }
+        </script>
+    
+</body>
+</html>
+
+
